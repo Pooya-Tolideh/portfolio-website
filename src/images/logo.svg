@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3671.276 -4240 226.552 77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fc4415;
+        stroke-width: 2px;
+        font-size: 51px;
+        font-family: BrandonGrotesque-Bold, Brandon Grotesque;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="logo" transform="translate(-3814.276 -4278)">
+    <text id="P" class="cls-1" transform="translate(172.368 94)"><tspan x="0" y="0">P</tspan></text>
+    <text id="T" class="cls-1" transform="translate(319.207 94)"><tspan x="0" y="0">T</tspan></text>
+    <rect id="Rectangle_181" data-name="Rectangle 181" class="cls-2" width="123.345" height="2.5" transform="translate(143 68.69)"/>
+    <rect id="Rectangle_182" data-name="Rectangle 182" class="cls-2" width="181.115" height="2.5" transform="translate(188.437 85.471)"/>
+  </g>
+</svg>

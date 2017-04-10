@@ -1,0 +1,31 @@
+/*
+=====================================================
+ * fz() mixin
+ * Desc: Returns a specific font size based on the input
+ * Usage: Must be used as property:value pair
+ * Related Path:  settings/type.scss
+ =====================================================
+ */
+
+
+@mixin fz($font-sizing) {
+    @if $font-sizing == mini { font-size: $font-mini; }
+
+    @if $font-sizing == xs { font-size: $font-tiny; }
+
+    @if $font-sizing == s { font-size: $font-small; }
+
+    @if $font-sizing == m { font-size: $font-med; }
+
+    @if $font-sizing == l { font-size: $font-large; }
+
+    @if $font-sizing == xl { font-size: $font-xlarge; }
+
+    @if $font-sizing == xxl { font-size: $font-big; }
+
+    @if $font-sizing == xxx { font-size: $font-huge; }
+
+    @if $font-sizing == mega { font-size: $font-mega; }
+
+    @if $font-sizing == giga { font-size: $font-giga; }
+}

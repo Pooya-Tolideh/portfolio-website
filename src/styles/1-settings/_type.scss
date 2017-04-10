@@ -1,0 +1,45 @@
+/*
+=====================================================
+ * 1. Base: 
+    Base typographical styles and baseline grid.
+
+ * 2. Font size reference: 
+    used in tools/fonts.scss
+
+ * 3. High-level:
+    High-level base settings.
+=====================================================
+ */
+
+
+
+/* 1. Base  
+*____________________ */
+
+$global-font-size:    16px !default;
+$global-line-height:  24px !default;
+
+
+
+/* 2. Font Size Reference
+ *____________________ */
+
+
+$font-mini: 1.1rem !default;
+$font-tiny: 1.2rem !default;
+$font-small: 1.3rem !default;
+$font-med: 1.4rem !default;
+$font-large: 1.6rem !default;
+$font-xlarge: 1.8rem !default;
+$font-big: 2rem !default;
+$font-huge: 2.2rem !default;
+$font-mega: 2.4rem !default;
+$font-giga: 3.2rem !default;
+
+
+/* 3. High-level
+ *____________________ */
+$base-font-size:        $font-large !default;
+$base-line-height:      $font-mega !default;
+
+

@@ -1,0 +1,78 @@
+/*
+=====================================================
+ * 1. widths
+ * 2. media queries
+ =====================================================
+ */
+
+
+
+/* 1. WIDTHS
+ *____________________ */
+
+@mixin wt($box-width) {
+
+    @if ($box-width == single) {
+        width: percentage(1/12);
+    }
+
+    @if ($box-width == double) {
+        width: percentage(2/12);
+    }
+
+    @if ($box-width == quarter) {
+        width: percentage(3/12);
+    }
+
+    @if ($box-width == third) {
+        width: percentage(4/12);
+    }
+
+    @if ($box-width == five) {
+        width: percentage(5/12);
+    }
+
+    @if ($box-width == half) {
+        width: percentage(6/12);
+    }
+
+    @if ($box-width == seven) {
+        width: percentage(7/12);
+    }
+
+    @if ($box-width == two-third) {
+        width: percentage(8/12);
+    }
+
+    @if ($box-width == three-quarter) {
+        width: percentage(9/12);
+    }
+
+    @if ($box-width == ten) {
+        width: percentage(10/12);
+    }
+
+    @if ($box-width == eleven) {
+        width: percentage(11/12);
+    }
+
+    @if ($box-width == full) {
+        width: percentage(12/12);
+    }
+}
+
+
+
+/* 1. MEDIA QUERIES
+ *____________________ */
+
+
+@mixin mq($min-wt, $max-wt: null) {
+
+    @if ($max-wt) {
+      @media all and (min-width: $min-wt + 1 ) and (max-width: $max-wt - 1) { @content; }
+    }
+    @else {
+      @media all and (min-width: $min-wt - 1) { @content; }
+    }
+}

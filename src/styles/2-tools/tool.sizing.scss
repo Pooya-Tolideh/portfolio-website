@@ -1,0 +1,28 @@
+/*
+=====================================================
+ * sz() Sass Function
+ * Desc: Calculates and returns size value for margin, 
+*  paddings and other spaces
+ * Usage: Must be used as the value in css
+ * Related Path:  settings/spacing file
+ =====================================================
+ */
+
+
+@function sz($sz-name) {
+    @if $sz-name == mini { @return $size-mini; }
+
+    @if $sz-name == xs { @return $size-tiny; }
+
+    @if $sz-name == s { @return $size-small; }
+
+    @if $sz-name == m { @return $size-med; }
+
+    @if $sz-name == l { @return $size-large; }
+
+    @if $sz-name == xl { @return $size-xlarge; }
+
+    @if $sz-name == xxl { @return $size-big; }
+
+    @if $sz-name == xxx { @return $size-huge; }
+}
