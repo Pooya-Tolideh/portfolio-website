@@ -1,0 +1,13 @@
+.c-skill {
+    text-align: center;
+}
+
+.c-skill__name {
+    padding-top: sz(mini);
+    color: $color-gray;
+    @include fz(xs);
+    letter-spacing: 1px;
+    font-weight: $font-thin;
+    line-height: sz(s);
+
+}

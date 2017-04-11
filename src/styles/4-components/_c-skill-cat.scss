@@ -1,4 +1,7 @@
 
+
+//Skill Category Tab
+
 .c-skill-cat__tab {
     // for skill-cat flexbox
     align-self: stretch;
@@ -13,7 +16,9 @@
 
 .c-skill-cat__title {
     color: $color-lightgray;
+    letter-spacing: 0.1em;
     @include fz(l);
+    font-weight: $font-reg;
 }
 
 .c-skill-cat__divider {
@@ -28,4 +33,20 @@
     width: sz(s); height: sz(s);
     flex: 1;
     flex-basis: sz(s); // so it doesn't shrink beyond its smallest width
+}
+
+
+//Skill Category Pod
+.c-skill-cat__pod {
+    background: $color-navy;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: sz(s);
+}
+
+.c-skill-cat__pod-item {
+    @include wt(half);
+    padding-bottom: sz(l);
 }
