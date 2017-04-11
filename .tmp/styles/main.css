@@ -542,7 +542,6 @@ p {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid red;
   height: 200px; }
 
 .l-flex-col {
@@ -562,15 +561,56 @@ p {
       -ms-flex-align: center;
           align-items: center; }
 
+.c-skill-cat {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0; }
+
+.c-skill-cat__title {
+  color: #F9F8F4;
+  font-size: 1.6em; }
+
+.c-skill-cat__divider {
+  width: 100%;
+  -webkit-flex: 50;
+      -ms-flex: 50;
+          flex: 50;
+  height: 1px;
+  background: #D5D5D7;
+  margin: 0 10px; }
+
+.c-skill-cat__icon {
+  width: 1.6em;
+  height: 1.6em;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-basis: 1.6em;
+      -ms-flex-preferred-size: 1.6em;
+          flex-basis: 1.6em; }
+
 .m-sidebar {
   padding-right: 1em;
-  padding-left: 1em; }
+  padding-left: 1em;
+  width: 100%; }
 
 .m-sidebar__profile-logo {
   padding-top: 2.4em; }
 
 .m-sidebar__profile-pic {
-  border: 1px solid cyan;
   width: 18.2em;
   height: auto;
   padding-top: 1.2em; }
@@ -596,6 +636,29 @@ p {
   padding-top: 20px; }
 
 .m-sidebar__skills {
-  border: 1px solid cyan; }
+  width: 100%;
+  max-width: 279px; }
+
+.m-sidebar__skills-header {
+  font-size: 2em;
+  padding-top: 3.2em;
+  color: #FC4415;
+  width: 100%;
+  text-align: center; }
+
+.m-sidebar__skills-header::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 15px auto 0;
+  background: #808C9A; }
+
+.m-sidebar__skills-list {
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-self: stretch;
+  padding: 2em 0.8em; }
 
 /*# sourceMappingURL=main.css.map */

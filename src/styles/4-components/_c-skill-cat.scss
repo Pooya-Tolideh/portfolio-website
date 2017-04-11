@@ -1,0 +1,27 @@
+.c-skill-cat {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: sz(m) 0;
+}
+
+.c-skill-cat__title {
+    color: $color-lightgray;
+    @include fz(l);
+}
+
+.c-skill-cat__divider {
+    width: 100%; // important to set this relative width for super stretchy items
+    flex: 50;   // max growth 
+    height: 1px;
+    background: $color-gray;
+    margin: 0 10px;
+}
+
+.c-skill-cat__icon {
+    width: sz(s); height: sz(s);
+    flex: 1;
+    flex-basis: sz(s); // so it doesn't shrink beyond its smallest width
+}
