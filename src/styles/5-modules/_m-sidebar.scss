@@ -2,10 +2,17 @@
     //gutters
     padding-right: sz(g);
     padding-left: sz(g);
-    
+
     text-align: center;
 }
 
 .m-sidebar__logo {
-    padding-top: sz(l);    
+    display: block;    
+    padding-top: sz(l);
+}
+
+.m-sidebar__profile-pic {
+    display: block;
+    width: 18.2em;
+    height: auto;
 }
