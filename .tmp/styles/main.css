@@ -512,6 +512,9 @@ dfn[title] {
 * {
   font-size: 10px; }
 
+body {
+  background-color: #131822; }
+
 h1 {
   color: #F9F8F4;
   font-family: "Oswald", sans-serif;
