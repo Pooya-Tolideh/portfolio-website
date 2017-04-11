@@ -79,7 +79,7 @@
 // so it's important for the parent container to have
 //a full/fixed width
 
-.m-sidebar__skills-pod {
-    align-self: stretch;
+.m-sidebar__skills-container {
+    width: 100%;
     padding: sz(m) sz(mini);
 }
