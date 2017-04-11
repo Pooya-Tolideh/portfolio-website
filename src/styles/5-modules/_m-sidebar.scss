@@ -1,8 +1,16 @@
+// 1. profile
+// 2. skills
+
+
 .m-sidebar {
     //gutters
     padding-right: sz(g);
     padding-left: sz(g);
+    width: 100%;
 }
+
+// 1. PROFILE
+// ________________________
 
 .m-sidebar__profile-logo {    
     padding-top: sz(l);
@@ -38,6 +46,10 @@
 }
 
 
+
+// 2. Skills
+// ________________________
+
 .m-sidebar__skills {
     // border: 1px solid cyan;
     width: 100%;
@@ -59,4 +71,15 @@
     width: 100%;
     margin: 15px auto 0;
     background: $color-midgray;
+}
+
+//making the list take the full width of its container
+// each item inside skill-cat has a flex property
+// this means it grows and shrinks.
+// so it's important for the parent container to have
+//a full/fixed width
+
+.m-sidebar__skills-list {
+    align-self: stretch;
+    padding: sz(m) sz(mini);
 }
