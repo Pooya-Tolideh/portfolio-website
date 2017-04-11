@@ -10,6 +10,8 @@
 
 
 @function sz($sz-name) {
+    @if $sz-name == g { @return $size-gutter;} //1
+
     @if $sz-name == mini { @return $size-mini; } //0.8
 
     @if $sz-name == xs { @return $size-tiny; } //1.2
