@@ -25,5 +25,5 @@ p {
     color: $color-midgray;
     font-family: $secondary-font-family;
     @include fz(m);
-    font-weight: 300;
+    font-weight: $font-thin;
 }
