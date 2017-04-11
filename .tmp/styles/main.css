@@ -538,6 +538,9 @@ p {
   font-size: 1.4em;
   font-weight: 300; }
 
+li {
+  list-style: none; }
+
 .l-container {
   width: 90%;
   max-width: 1200px;
@@ -561,7 +564,10 @@ p {
       -ms-flex-align: center;
           align-items: center; }
 
-.c-skill-cat {
+.c-skill-cat__tab {
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -581,7 +587,9 @@ p {
 
 .c-skill-cat__title {
   color: #F9F8F4;
-  font-size: 1.6em; }
+  letter-spacing: 0.1em;
+  font-size: 1.6em;
+  font-weight: 400; }
 
 .c-skill-cat__divider {
   width: 100%;
@@ -601,6 +609,37 @@ p {
   -webkit-flex-basis: 1.6em;
       -ms-flex-preferred-size: 1.6em;
           flex-basis: 1.6em; }
+
+.c-skill-cat__pod {
+  background: #1B2230;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding: 1.6em; }
+
+.c-skill-cat__pod-item {
+  width: 50%;
+  padding-bottom: 2.4em; }
+
+.c-skill {
+  text-align: center; }
+
+.c-skill__name {
+  padding-top: 0.8em;
+  color: #D5D5D7;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.6em; }
 
 .m-sidebar {
   padding-right: 1em;
@@ -637,14 +676,15 @@ p {
 
 .m-sidebar__skills {
   width: 100%;
-  max-width: 279px; }
+  max-width: 300px; }
 
 .m-sidebar__skills-header {
   font-size: 2em;
   padding-top: 3.2em;
   color: #FC4415;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.1em; }
 
 .m-sidebar__skills-header::after {
   content: "";
@@ -654,11 +694,8 @@ p {
   margin: 15px auto 0;
   background: #808C9A; }
 
-.m-sidebar__skills-list {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-              -ms-grid-row-align: stretch;
-          align-self: stretch;
-  padding: 2em 0.8em; }
+.m-sidebar__skills-container {
+  width: 100%;
+  padding: 2em 0; }
 
 /*# sourceMappingURL=main.css.map */
