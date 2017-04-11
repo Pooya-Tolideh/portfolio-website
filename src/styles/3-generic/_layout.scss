@@ -1,3 +1,4 @@
+//general wrapper
 .l-container {
     width: 90%;
     max-width: 1200px;
@@ -6,6 +7,7 @@
     height: 200px; 
 }
 
+//stacks items vertically
 .l-flex-col {
     display: flex;
     flex-direction: column;
