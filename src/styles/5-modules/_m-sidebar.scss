@@ -23,6 +23,14 @@
 .m-sidebar__title {
     text-shadow: 3px 3px 0px $color-blue;
     padding-top: 64px;
+}
 
+.m-sidebar__title::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 112px;
+    margin: 20px auto 0;
+    background: $color-orange;
 }
 
