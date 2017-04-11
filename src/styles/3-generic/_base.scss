@@ -11,6 +11,8 @@ h1 {
     color: $color-lightgray;
     font-family: $primary-font-family;
     @include fz(mega);
+    font-weight: $font-reg;
+    letter-spacing: 5px;
 }
 
 h2 {
