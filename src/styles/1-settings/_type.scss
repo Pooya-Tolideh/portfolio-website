@@ -8,6 +8,8 @@
 
  * 3. High-level:
     High-level base settings.
+
+* 4. Font-Family
 =====================================================
  */
 
@@ -43,3 +45,8 @@ $base-font-size:        $font-large !default;
 $base-line-height:      $font-mega !default;
 
 
+
+/* 4. font-family
+ *____________________ */
+$primary-font-family: 'Oswald', sans-serif;
+$secondary-font-family:'Roboto', sans-serif;
