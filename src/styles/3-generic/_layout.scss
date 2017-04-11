@@ -5,3 +5,11 @@
     border: 1px solid red;
     height: 200px; 
 }
+
+.l-flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
