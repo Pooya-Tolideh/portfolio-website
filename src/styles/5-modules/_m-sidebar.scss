@@ -3,16 +3,19 @@
     padding-right: sz(g);
     padding-left: sz(g);
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.m-sidebar__logo {
-    display: block;    
+.m-sidebar__logo {    
     padding-top: sz(l);
 }
 
 .m-sidebar__profile-pic {
-    display: block;
-    width: 18.2em;
-    height: auto;
+    border: 1px solid cyan;
+    width: 18.2em; height: auto;
+    padding-top: sz(xs);
 }
