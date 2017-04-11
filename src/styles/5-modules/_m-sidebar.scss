@@ -1,7 +1,11 @@
 .m-sidebar {
-
+    //gutters
+    padding-right: sz(g);
+    padding-left: sz(g);
+    
+    text-align: center;
 }
 
 .m-sidebar__logo {
-    
+    padding-top: sz(l);    
 }

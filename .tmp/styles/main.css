@@ -543,4 +543,12 @@ p {
   border: 1px solid red;
   height: 200px; }
 
+.m-sidebar {
+  padding-right: 1em;
+  padding-left: 1em;
+  text-align: center; }
+
+.m-sidebar__logo {
+  padding-top: 2.4em; }
+
 /*# sourceMappingURL=main.css.map */
