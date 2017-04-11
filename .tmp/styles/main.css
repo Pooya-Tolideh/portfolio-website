@@ -518,7 +518,9 @@ body {
 h1 {
   color: #F9F8F4;
   font-family: "Oswald", sans-serif;
-  font-size: 2.8em; }
+  font-size: 2.8em;
+  font-weight: 400;
+  letter-spacing: 7px; }
 
 h2 {
   color: #808C9A;
@@ -546,9 +548,49 @@ p {
 .m-sidebar {
   padding-right: 1em;
   padding-left: 1em;
-  text-align: center; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .m-sidebar__logo {
   padding-top: 2.4em; }
+
+.m-sidebar__profile-pic {
+  border: 1px solid cyan;
+  width: 18.2em;
+  height: auto;
+  padding-top: 1.2em; }
+
+.m-sidebar__title {
+  text-shadow: 3px 3px 0px #0063EA;
+  padding-top: 64px; }
+
+.m-sidebar__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 112px;
+  margin: 25px auto 0;
+  background: #FC4415; }
+
+.m-sidebar__kicker {
+  width: 258px;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  color: #D5D5D7;
+  padding-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
