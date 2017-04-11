@@ -23,6 +23,8 @@
 
  * 3. High-level:
     High-level base settings.
+
+* 4. Font-Family
 =====================================================
  */
 /* 1. Base  
@@ -30,6 +32,8 @@
 /* 2. Font Size Reference
  *____________________ */
 /* 3. High-level
+ *____________________ */
+/* 4. font-family
  *____________________ */
 /*
 =====================================================
@@ -500,5 +504,29 @@ table {
 abbr[title],
 dfn[title] {
   cursor: help; }
+
+* {
+  font-size: 10px; }
+
+h1 {
+  color: #F9F8F4;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8em; }
+
+h2 {
+  color: #808C9A;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.2em; }
+
+h3 {
+  color: #131822;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8em; }
+
+p {
+  color: #808C9A;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300; }
 
 /*# sourceMappingURL=main.css.map */
