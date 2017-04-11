@@ -10,19 +10,21 @@
 
 
 @function sz($sz-name) {
-    @if $sz-name == mini { @return $size-mini; }
+    @if $sz-name == mini { @return $size-mini; } //0.8
 
-    @if $sz-name == xs { @return $size-tiny; }
+    @if $sz-name == xs { @return $size-tiny; } //1.2
 
-    @if $sz-name == s { @return $size-small; }
+    @if $sz-name == s { @return $size-small; } //1.6
 
-    @if $sz-name == m { @return $size-med; }
+    @if $sz-name == m { @return $size-med; } //2
 
-    @if $sz-name == l { @return $size-large; }
+    @if $sz-name == l { @return $size-large; } //2.4
 
-    @if $sz-name == xl { @return $size-xlarge; }
+    @if $sz-name == xl { @return $size-xlarge; } //3.2
 
-    @if $sz-name == xxl { @return $size-big; }
+    @if $sz-name == xxl { @return $size-big; } //4.8
 
-    @if $sz-name == xxx { @return $size-huge; }
+    @if $sz-name == xxx { @return $size-huge; } //6.4
+
+    @if $sz-name == mega { @return $size-mega; } //7.2
 }
