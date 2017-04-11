@@ -30,7 +30,17 @@
     display: block;
     height: 2px;
     width: 112px;
-    margin: 20px auto 0;
+    margin: 25px auto 0;
     background: $color-orange;
+}
+
+
+.m-sidebar__kicker {
+    width: 258px;
+    text-align: center;
+    @include fz(l);
+    line-height: $font-large;
+    color: $color-gray;
+    padding-top: 20px;
 }
 
