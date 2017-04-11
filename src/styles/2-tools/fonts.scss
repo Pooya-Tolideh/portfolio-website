@@ -9,23 +9,23 @@
 
 
 @mixin fz($font-sizing) {
-    @if $font-sizing == mini { font-size: $font-mini; }
+    @if $font-sizing == mini { font-size: $font-mini; } //1.1
 
-    @if $font-sizing == xs { font-size: $font-tiny; }
+    @if $font-sizing == xs { font-size: $font-tiny; } //1.2
 
-    @if $font-sizing == s { font-size: $font-small; }
+    @if $font-sizing == s { font-size: $font-small; } //1.3
 
-    @if $font-sizing == m { font-size: $font-med; }
+    @if $font-sizing == m { font-size: $font-med; } //1.4
 
-    @if $font-sizing == l { font-size: $font-large; }
+    @if $font-sizing == l { font-size: $font-large; } //1.6
 
-    @if $font-sizing == xl { font-size: $font-xlarge; }
+    @if $font-sizing == xl { font-size: $font-xlarge; } //1.8
 
-    @if $font-sizing == xxl { font-size: $font-big; }
+    @if $font-sizing == xxl { font-size: $font-big; } //2
 
-    @if $font-sizing == xxx { font-size: $font-huge; }
+    @if $font-sizing == xxx { font-size: $font-huge; } //2.2
 
-    @if $font-sizing == mega { font-size: $font-mega; }
+    @if $font-sizing == mega { font-size: $font-mega; } //2.8
 
-    @if $font-sizing == giga { font-size: $font-giga; }
+    @if $font-sizing == giga { font-size: $font-giga; } //3.2
 }
