@@ -536,4 +536,11 @@ p {
   font-size: 1.4em;
   font-weight: 300; }
 
+.l-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid red;
+  height: 200px; }
+
 /*# sourceMappingURL=main.css.map */
