@@ -7,7 +7,11 @@
     padding-right: sz(g);
     padding-left: sz(g);
     width: 100%;
-    // border: 1px solid $color-midgray;
+    border: 1px solid yellow;
+
+    @include mq(1120px) {
+        @include wt(third);
+    }
 }
 
 // 1. PROFILE
