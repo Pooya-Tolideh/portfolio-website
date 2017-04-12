@@ -1,16 +1,29 @@
-//general wrapper
-.l-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 200px; 
-}
-
 //stacks items vertically
 .l-flex-col {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: stretch;
+    align-items: flex-start;
 }
+
+//general wrapper
+.l-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 200px;
+
+
+
+    border: 5px solid green;
+    @include mq(1120px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+}
+
