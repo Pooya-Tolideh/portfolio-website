@@ -1,0 +1,10 @@
+.m-portfolio {
+    @include wt(full);
+    text-align: center;
+    background: $color-lightgray;
+    border-radius: 12px;
+}
+
+.m-portfolio__header {
+    padding-top: 30px;
+}
