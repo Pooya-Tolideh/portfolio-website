@@ -12,6 +12,7 @@
 .c-portfolio__item {
     //@include wt(two-third);
     @include wt(ten);
+    max-width: 584px;
     padding-bottom: 12em;
 
     &:last-child {
