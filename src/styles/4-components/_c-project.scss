@@ -16,6 +16,12 @@
     }
 }
 
+
+
+
+// 2. Project Info Section
+// ______________________
+
 .c-project__info {
     align-self: stretch;
     padding-top: 20px;
@@ -34,6 +40,9 @@
     }
 }
 
+
+// 2.1 Project title
+// ______________________
 .c-project__title {
     //desktop mode
     @include mq(768px) {
@@ -41,6 +50,9 @@
         @include wt(half);
     }
 }
+
+// 2.2 Project description section
+// _____________________________
 
 .c-project__desc {
     padding-top: 15px;
@@ -55,6 +67,9 @@
         align-items: flex-start;
     }
 }
+
+// 2.2.1 Project roles 
+// _____________________________
 
 .c-project__desc-roles {
     //related to project__desc flexbox
@@ -88,6 +103,10 @@
         content: "";
     } 
 }
+
+
+// 2.2.2 Project Caption under roles 
+// _____________________________
 
 .c-project__desc-caption {
     //related to project__desc flexbox
