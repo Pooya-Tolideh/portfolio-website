@@ -12,15 +12,17 @@
 @import "3-generic/base";
 @import "3-generic/layout";
 
-@import "4-components/c-skill-cat";
-@import "4-components/c-skill";
-@import "4-components/c-social";
-@import "4-components/c-portfolio";
-@import "4-components/c-portfolio-header";
-@import "4-components/c-project";
+@import "4-animations/hover-link";
 
-@import "5-modules/m-sidebar";
-@import "5-modules/m-main";
+@import "5-components/c-skill";
+@import "5-components/c-skill-cat";
+@import "5-components/c-social";
+@import "5-components/c-portfolio";
+@import "5-components/c-portfolio-header";
+@import "5-components/c-project";
+
+@import "6-modules/m-sidebar";
+@import "6-modules/m-main";
 
 
 
