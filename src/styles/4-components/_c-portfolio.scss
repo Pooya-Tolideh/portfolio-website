@@ -10,5 +10,7 @@
 }
 
 .c-portfolio__item {
-    align-self: stretch;
+    //@include wt(two-third);
+    @include wt(ten);
+    padding-bottom: 10em;
 }
