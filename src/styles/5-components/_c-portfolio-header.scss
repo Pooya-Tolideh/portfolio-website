@@ -1,5 +1,9 @@
 .c-portfolio-header {
     letter-spacing: 2px;
+
+    @include mq(680px) {
+        font-size: 3.6em;
+    }
 }
 
 .c-portfolio-header::before {
