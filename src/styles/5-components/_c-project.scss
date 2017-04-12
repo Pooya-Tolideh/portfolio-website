@@ -11,14 +11,19 @@
 
     position: relative;
     height: 180px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background-image: url('../../images/sample-project.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba($color-gray, 0.75);
 
     @include mq(576px) {
         height: 280px;
+    }
+
+    @include mq(1120px) {
+        box-shadow: 0 2px 2px $color-gray;
     }
 
     &:hover {
