@@ -57,7 +57,7 @@
     line-height: $font-large;
     color: $color-gray;
     padding-top: 20px;
-
+      
     @include mq(488px, 1120px) {
         width: 350px;
         @include fz(xxl);
