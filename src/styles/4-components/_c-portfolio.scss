@@ -1,0 +1,10 @@
+.c-portfolio {
+    @include wt(full);
+    text-align: center;
+    background: $color-lightgray;
+    border-radius: 12px;
+}
+
+.c-portfolio__header {
+    padding: 40px 0 80px 0;
+}
