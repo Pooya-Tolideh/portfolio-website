@@ -20,7 +20,7 @@
     @include fz(l);
     font-weight: $font-reg;
 
-    @include mq(488px, 1024px){
+    @include mq(488px, 1120px){
         @include fz(xl);
     }
 }
