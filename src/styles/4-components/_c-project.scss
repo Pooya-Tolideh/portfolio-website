@@ -20,6 +20,14 @@
     @include mq(576px) {
         height: 280px;
     }
+
+    &:hover .c-project__corner-icon {
+        display: none;
+    }
+
+    &:hover .c-project__link {
+        display: inline-block;
+    }
 }
 
 .c-project__corner-icon {
@@ -29,14 +37,53 @@
     top: 20px;
 
     & path {
-        fill: $color-white;
+        fill: rgba($color-white, 0.2);
         stroke: rgba($color-midgray, 0.5);
         stroke-width: 1px;
+    }
+
+    @include mq(1120px) {
+        display: none;
     }
 
 }
 
 
+// 1. Project Hover
+// ______________________
+
+.c-project__link {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: rgba($color-white, 0.7);
+    border: 1px solid $color-orange;
+    padding: 20px;
+    border-radius: 50px;
+
+    display: none;
+}
+
+.c-project__link-text {
+    @include fz(xxl);
+    color: $color-white;
+    display: none;
+}
+
+.c-project__link-icon {
+    width: 20px; height: auto;
+
+    & path {
+        fill: $color-orange;
+    }
+}
 
 
 
