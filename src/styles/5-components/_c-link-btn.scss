@@ -1,4 +1,4 @@
-.c-link-btn__link {
+.c-link-btn {
     position: absolute;
     left: 50%; top: 50%;
     opacity: 0;
@@ -16,7 +16,7 @@
 
 
     &:hover {
-        .c-link-btn__link-text {
+        .c-link-btn__text {
             @include fz(xl);
             margin-right: 10px;  
         }
