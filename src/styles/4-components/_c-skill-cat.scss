@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: sz(m) 0;
+    padding: sz(l) 0;
 }
 
 .c-skill-cat__title {
@@ -19,6 +19,10 @@
     letter-spacing: 0.1em;
     @include fz(l);
     font-weight: $font-reg;
+
+    @include mq(488px, 1024px){
+        @include fz(xl);
+    }
 }
 
 .c-skill-cat__divider {

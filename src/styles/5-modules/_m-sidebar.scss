@@ -21,11 +21,19 @@
 .m-sidebar__profile-pic {
     width: 15em; height: auto;
     padding-top: sz(xl);
+
+    @include mq(488px, 1024px){
+        width: 18em;
+    }
 }
 
 .m-sidebar__profile-title {
     text-shadow: 3px 3px 0px $color-blue;
     padding-top: 48px;
+
+    @include mq(488px, 1024px) {
+        font-size: 4.8em;
+    }
 }
 
 .m-sidebar__profile-title::after {
@@ -39,12 +47,17 @@
 
 
 .m-sidebar__profile-kicker {
-    width: 258px;
+    width: 300px;
     text-align: center;
-    @include fz(l);
+    @include fz(xl);
     line-height: $font-large;
     color: $color-gray;
     padding-top: 20px;
+
+    @include mq(488px, 1024px) {
+        width: 350px;
+        @include fz(xxl);
+    }
 }
 
 
@@ -59,7 +72,7 @@
 }
 
 .m-sidebar__skills-header {
-    @include fz(xxl);
+    @include fz(xxx);
     color: $color-orange;
     width: 100%;
     text-align: center;
