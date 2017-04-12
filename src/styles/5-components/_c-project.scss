@@ -49,7 +49,7 @@
     @include mq(768px) {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 }
 
@@ -57,15 +57,19 @@
 // 2.1 Project title
 // ______________________
 .c-project__title {
+    letter-spacing: 1px;
+    line-height: 1.6em;
     //desktop mode
     @include mq(768px) {
+
+        @include wt(five);
+        text-align: left;
+        //for the tail
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        text-align: left;
         text-decoration: none;
-        @include wt(half);
     }
 }
 
@@ -89,8 +93,8 @@
 
     //desktop mode
     @include mq(768px) {
+        @include wt(seven);
         text-align: left;
-        @include wt(half);
         padding: 0;
         //vertical flex
         justify-content: flex-start;
@@ -108,7 +112,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 
     padding-top: 20px;
 
@@ -121,7 +125,8 @@
 }
 
 .c-project__role {
-    @include fz(s);
+    @include fz(m);
+    line-height: 1.6em;
 
     &::after {
         content: "/";
@@ -150,7 +155,7 @@
     @include mq(768px) {
         order: 2;
         @include wt(full);
-        padding-top: 20px;
+        padding-top: 10px;
     }
 }
 
