@@ -17,9 +17,13 @@
     //@include wt(two-third);
     @include wt(ten);
     max-width: 584px;
-    padding-bottom: 12em;
+    padding-bottom: 8em;
 
     &:last-child {
         padding-bottom: 60px;
+    }
+
+    @include mq(680px) {
+        padding-bottom: 12em;
     }
 }
