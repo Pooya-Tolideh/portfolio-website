@@ -1,4 +1,11 @@
 .m-main {
     @include wt(full);
     margin: 0 auto;
+
+    border: 2px solid cyan;
+
+    @include mq(1120px) {
+        margin: 0;
+        @include wt(two-third);
+    }
 }
