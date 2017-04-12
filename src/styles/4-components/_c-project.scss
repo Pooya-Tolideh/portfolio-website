@@ -4,11 +4,16 @@
     //height: 280px;
     // margin-bottom: 40px;
     align-self: stretch;
-    height: 200px;
+    height: 180px;
     margin-bottom: 20px;
     background-image: url('../../images/sample-project.png');
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
+
+    @include mq(576px) {
+        height: 280px;
+    }
 }
 
 .c-project__info {
@@ -19,20 +24,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+
+    //desktop mode
+    @include mq(768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.c-project__title {
+    //desktop mode
+    @include mq(768px) {
+        text-align: left;
+        @include wt(half);
+    }
 }
 
 .c-project__desc {
     padding-top: 15px;
+
+    //desktop mode
+    @include mq(768px) {
+        text-align: left;
+        @include wt(half);
+        padding: 0;
+        //vertical flex
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 }
 
 .c-project__desc-roles {
+    //related to project__desc flexbox
+    order: 2;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    order: 2;
 
     padding-top: 20px;
+
+    //desktop mode
+    @include mq(768px) {
+        padding: 0;
+    }
+
+
 }
 
 .c-project__role {
@@ -50,11 +90,19 @@
 }
 
 .c-project__desc-caption {
-    @include wt(three-quarter);
+    //related to project__desc flexbox
     order: 1;
     
+    @include wt(eleven);
     @include fz(l);
     line-height: 1.4em;
+
+    //desktop mode
+    @include mq(768px) {
+        order: 2;
+        @include wt(full);
+        padding-top: 20px;
+    }
 }
 
 
