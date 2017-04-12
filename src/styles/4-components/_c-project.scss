@@ -1,9 +1,15 @@
 
 
+
+// 1. Project Thumbnail
+// ______________________
+
+
 .c-project__thumb{
-    //height: 280px;
-    // margin-bottom: 40px;
+    //flex-box: c-project
     align-self: stretch;
+
+    position: relative;
     height: 180px;
     margin-bottom: 20px;
     background-image: url('../../images/sample-project.png');
@@ -15,6 +21,23 @@
         height: 280px;
     }
 }
+
+.c-project__corner-icon {
+    position: absolute;
+    width: 20px; height: auto;
+    right: 20px;
+    top: 20px;
+
+    & path {
+        fill: $color-white;
+        stroke: rgba($color-midgray, 0.5);
+        stroke-width: 1px;
+    }
+
+}
+
+
+
 
 
 
