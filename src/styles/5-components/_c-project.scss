@@ -79,10 +79,26 @@
 .c-project__title {
     //desktop mode
     @include mq(768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
         text-align: left;
         @include wt(half);
     }
 }
+
+.c-project__title::before {
+    @include mq(768px) {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: $color-orange;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+
 
 // 2.2 Project description section
 // _____________________________
