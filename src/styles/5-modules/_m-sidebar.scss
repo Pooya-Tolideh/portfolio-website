@@ -7,23 +7,25 @@
     padding-right: sz(g);
     padding-left: sz(g);
     width: 100%;
+    // border: 1px solid $color-midgray;
 }
 
 // 1. PROFILE
 // ________________________
 
 .m-sidebar__profile-logo {    
-    padding-top: sz(l);
+    // padding-top: sz(l);
+    width: 175%;
 }
 
 .m-sidebar__profile-pic {
-    width: 18.2em; height: auto;
-    padding-top: sz(xs);
+    width: 15em; height: auto;
+    padding-top: sz(xl);
 }
 
 .m-sidebar__profile-title {
     text-shadow: 3px 3px 0px $color-blue;
-    padding-top: 64px;
+    padding-top: 48px;
 }
 
 .m-sidebar__profile-title::after {
@@ -51,14 +53,13 @@
 // ________________________
 
 .m-sidebar__skills {
-    // border: 1px solid cyan;
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 500px;
+    padding-top: sz(xxx);
 }
 
 .m-sidebar__skills-header {
     @include fz(xxl);
-    padding-top: sz(xl);
     color: $color-orange;
     width: 100%;
     text-align: center;
