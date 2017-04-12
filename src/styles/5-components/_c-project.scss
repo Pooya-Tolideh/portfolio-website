@@ -22,32 +22,12 @@
     }
 
     &:hover {
-        .c-project__corner-icon {
-            display: none;
-        }
         .c-link-btn {
             animation: hover-link-icon 150ms ease-in-out normal forwards;
         }
     }
 }
 
-.c-project__corner-icon {
-    position: absolute;
-    width: 20px; height: auto;
-    right: 20px;
-    top: 20px;
-
-    & path {
-        fill: rgba($color-white, 0.2);
-        stroke: rgba($color-midgray, 0.5);
-        stroke-width: 1px;
-    }
-
-    @include mq(1120px) {
-        display: none;
-    }
-
-}
 
 
 
