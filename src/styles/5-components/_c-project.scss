@@ -21,13 +21,13 @@
         height: 280px;
     }
 
-    &:hover .c-project__corner-icon {
-        display: none;
-    }
-
-    &:hover .c-project__link {
-        // transform-origin: center center 0;
-        animation: hover-link-icon 150ms ease-in-out normal forwards;
+    &:hover {
+        .c-project__corner-icon {
+            display: none;
+        }
+        .c-project__link {
+            animation: hover-link-icon 150ms ease-in-out normal forwards;
+        }
     }
 }
 
@@ -71,10 +71,8 @@
 
 
     &:hover {
-
-        & .c-project__link-text {
+        .c-project__link-text {
             @include fz(xl);
-            color: $color-orange;
             margin-right: 10px;  
         }
     }
@@ -82,7 +80,8 @@
 }
 
 .c-project__link-text {
-    color: $color-white;
+    color: $color-orange;
+    font-weight: $font-thin;
     font-size: 0;
     transform-origin: left center 0;
     transition: font-size 150ms ease-out;
