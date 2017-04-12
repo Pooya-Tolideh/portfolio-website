@@ -26,7 +26,8 @@
     }
 
     &:hover .c-project__link {
-        display: inline-block;
+        // transform-origin: center center 0;
+        animation: hover-link-icon 150ms ease-in-out normal forwards;
     }
 }
 
@@ -55,7 +56,7 @@
 .c-project__link {
     position: absolute;
     left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
+     opacity: 0;
 
     display: flex;
     flex-direction: row;
@@ -68,7 +69,6 @@
     padding: 20px;
     border-radius: 50px;
 
-    display: none;
 }
 
 .c-project__link-text {
