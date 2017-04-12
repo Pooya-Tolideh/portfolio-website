@@ -10,6 +10,13 @@
     align-items: center;
     justify-content: space-between;
     padding: sz(xl) 0;
+
+    //removing the contacts from sidebar on small screens
+    @include mq(1px, 1120px){
+        .m-sidebar & {
+            display: none;
+        }
+    }
 }
 
 .c-social__link {
