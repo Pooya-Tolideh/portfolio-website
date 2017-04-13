@@ -51,8 +51,10 @@
         <header class="m-sidebar__profile l-flex-col">
           <img class="m-sidebar__profile-logo" src="images/logo.svg" alt="PT logo">
           <img class="m-sidebar__profile-pic" src="images/profile-pic.png" alt="pooya tolideh's profile picture">
-          <h1 class="m-sidebar__profile-title">POOYA  TOLIDEH</h1>
-          <p class="m-sidebar__profile-kicker">I am an engineer and a self-taught coder who loves design.</p>
+          <div class="m-sidebar__profile-desc">
+            <h1 class="m-sidebar__profile-title">POOYA  TOLIDEH</h1>
+            <p class="m-sidebar__profile-kicker">I am an engineer and a self-taught coder who loves design.</p>
+          </div>
         </header>
         <!--./m-sidebar__profile-->
 
@@ -73,7 +75,7 @@
               </div>
               <!--./c-skill-cat__tab-->
 
-              <ul class="c-skill-cat__pod">
+              <ul class="c-skill-cat__pod c-skill-cat__pod--isClosed">
                 <li class="c-skill-cat__pod-item">
                   <div class="c-skill l-flex-col">
                     <img src="images/css3-icon.png" alt="" class="c-skill__icon">
@@ -143,7 +145,7 @@
               </div>
               <!--./c-skill-cat__tab-->
 
-              <ul class="c-skill-cat__pod">
+              <ul class="c-skill-cat__pod c-skill-cat__pod--isClosed">
                 <li class="c-skill-cat__pod-item">
                   <div class="c-skill l-flex-col">
                     <img src="images/css3-icon.png" alt="" class="c-skill__icon">
@@ -296,7 +298,77 @@
 
 
 
+  <script>
+    console.log('./START');
+    var skills = document.querySelectorAll('.c-skill-cat');
+    var profile = document.querySelector('.m-sidebar__profile-desc');
+    //keeps track of the profile section's height
+    //so we know what value to reset it to
+    var profile_height = profile.style.height;
 
+    var i = 0;
+    //loop through and add an event listener bubble to every category
+    for (; i < skills.length; i++){
+
+        skills[i].addEventListener('click', function(e){
+          var skillCat = e.target;
+          //get all the pods on every click
+          //used later for checking to see if any is already open
+          var skillTabs = document.querySelectorAll('.c-skill-cat__pod');
+
+          //checking if the clicked items is not __tab element already
+          if (e.target.className !== 'c-skill-cat__tab') {
+            var tag = e.target.tagName;
+            //check the tag names
+            //this is for the svg problem
+            if (tag === 'rect') {
+              skillCat = e.target.parentNode.parentNode.parentNode;
+            } else if (tag === 'g') {
+              skillCat = e.target.parentNode.parentNode;
+            } else {
+              skillCat = e.target.parentNode;
+            }
+          }
+
+          //once the parent element is determined get the pod
+          var pod = skillCat.parentNode.querySelector('.c-skill-cat__pod');
+
+          //check to see if the pod is already open
+          if (pod.className.indexOf('c-skill-cat__pod--isClosed') === -1) {
+            //if yes, turn back the icon
+            skillCat.querySelector('svg').style.transform = 'rotate(0deg)';
+            // add isClosed class to remove pod
+            pod.className += ' c-skill-cat__pod--isClosed';
+            // bring back the profile section
+            profile.className = ' m-sidebar__profile-desc';
+            // turn back the profile height
+            profile.style.height = profile_height;
+          } else {
+            //If the pod is closed
+            // loop through all the pods
+            var j = 0;
+            for (; j < skillTabs.length; j++){
+              //check to see if any pod is already open
+              if (skillTabs[j].className.indexOf('c-skill-cat__pod--isClosed') === -1) {
+                //close that pod
+                skillTabs[j].className += ' c-skill-cat__pod--isClosed';
+                //turn back its icon
+                skillTabs[j].parentNode.querySelector('svg').style.transform = 'rotate(0deg)';
+              }  
+            }
+            // rotate the icon for the selected pod
+            skillCat.querySelector('svg').style.transform = 'rotate(45deg)';
+            // remove isClosed classname
+            pod.className = 'c-skill-cat__pod';
+            // hide the profile and set its height to zero
+            // this is so the skill section is pulled up and more room is created
+            profile.className = 'm-sidebar__profile-desc m-sidebar__profile--isHidden';
+            profile.style.height = 0;
+          }
+        });
+    }
+    console.log('./END');
+  </script>
 
 
 
