@@ -12,6 +12,19 @@
     justify-content: flex-start;
     align-items: center;
     padding: sz(l) 0;
+
+    &:hover {
+        cursor: pointer;
+
+        .c-skill-cat__divider::before {
+            transform: scaleX(1);
+        }
+
+        .c-skill-cat__icon {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    }
 }
 
 .c-skill-cat__title {
@@ -29,14 +42,31 @@
     width: 100%; // important to set this relative width for super stretchy items
     flex: 50;   // max growth 
     height: 1px;
+    position: relative;
     background: $color-gray;
     margin: 0 10px;
 }
 
+.c-skill-cat__divider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: $color-orange;
+    display: inline-block;
+    transform-origin: left center 0;
+    transform: scaleX(0);
+    transition: transform 150ms ease-in;
+}
+
 .c-skill-cat__icon {
     width: sz(s); height: sz(s);
+    fill: $color-lightgray;
+    opacity: 0.7;
     flex: 1;
     flex-basis: sz(s); // so it doesn't shrink beyond its smallest width
+    transform: scale(1,1);
+    transition: transform 150ms ease-out 150ms, opacity 150ms ease-out 150ms ;
 }
 
 
