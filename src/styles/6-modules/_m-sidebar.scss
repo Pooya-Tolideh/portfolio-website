@@ -20,6 +20,10 @@
 .m-sidebar__profile-logo {    
     // padding-top: sz(l);
     width: 175%;
+
+    @include mq(1120px) {
+        width: 50%;
+    }
 }
 
 .m-sidebar__profile-pic {
@@ -62,6 +66,17 @@
         width: 350px;
         @include fz(xxl);
     }
+}
+
+.m-sidebar__profile-desc {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+}
+
+.m-sidebar__profile--isHidden {
+    transform: scale(0.3);
+    opacity: 0;
 }
 
 
