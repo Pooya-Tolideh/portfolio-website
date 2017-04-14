@@ -7,11 +7,27 @@
     padding-right: sz(g);
     padding-left: sz(g);
     width: 100%;
-    border: 1px solid yellow;
+    // border: 1px solid yellow;
 
     @include mq(1120px) {
         @include wt(third);
         max-width: 425px;
+        padding: 0 sz(xl);
+        position: fixed;
+        z-index: 10;
+        left: 0;
+    }
+}
+
+
+.m-sidebar__desktop {
+    @include mq(1120px) {
+        //gutters
+        @include wt(third);
+        max-width: 425px;
+        padding: 0 sz(xl);
+        height: 100vh;
+        opacity: 0;
     }
 }
 
