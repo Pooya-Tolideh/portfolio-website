@@ -13,6 +13,18 @@
     }
 }
 
+.c-portfolio__projects {
+
+    @include mq(1120px) {
+        @include wt(full);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+}
+
 .c-portfolio__item {
     //@include wt(two-third);
     @include wt(ten);
@@ -25,5 +37,15 @@
 
     @include mq(680px) {
         padding-bottom: 12em;
+    }
+
+    @include mq(1120px) {
+        // min-width: 700px;      
+    }
+
+    @include mq(1500px) {
+        // min-width: 400px;
+        // padding-bottom: 4em;
+        // flex: 1;
     }
 }

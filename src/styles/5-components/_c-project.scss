@@ -24,6 +24,8 @@
 
     @include mq(1120px) {
         box-shadow: 0 2px 2px $color-gray;
+        background-size: cover;
+        max-height: 300px;
     }
 
     &:hover {
