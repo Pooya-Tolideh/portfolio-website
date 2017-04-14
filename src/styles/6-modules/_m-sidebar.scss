@@ -19,7 +19,8 @@
     }
 }
 
-
+//the dummmy sidebar for when the main sidebar is fixed
+//this keeps the layout in tact
 .m-sidebar__desktop {
     @include mq(1120px) {
         //gutters
