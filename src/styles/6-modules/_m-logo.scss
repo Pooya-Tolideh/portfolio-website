@@ -6,7 +6,9 @@
     padding: sz(xs) 0 sz(xxl) 0;
 
     @include mq(1120px) {
+        flex-direction: row;
         position: fixed;
+        top: 0; left: 0;
         z-index: 10;
         opacity: 0.25;
     }
@@ -14,10 +16,6 @@
 
 .m-logo__side {
     width: 0; height: 0;
-
-    @include mq(1120px) {
-        width: 0; height: 0;
-    }
 }
 
 .m-logo__container {
@@ -25,12 +23,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include mq(1120px) {
+        @include wt(two-third);
+        flex-grow: 1;
+    }
 }
 
 .m-logo__pic {
     display: inline-block;
     width: 135%;
     max-width: 1000px;
+
+    @include mq(1120px) {
+        width: 80%;
+        max-width: 80%;
+    }
 }
 
 
