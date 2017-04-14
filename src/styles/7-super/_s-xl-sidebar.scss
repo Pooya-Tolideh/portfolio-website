@@ -1,0 +1,11 @@
+//the dummmy sidebar for when the main sidebar is fixed
+//this keeps the layout in tact
+.s-xl-sidebar{
+    @include mq(1120px) {
+        //gutters
+        @include wt(third);
+        max-width: 425px;
+        padding: 0 sz(xl);
+        height: 100vh;
+    }
+}
