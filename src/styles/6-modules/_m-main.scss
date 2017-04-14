@@ -1,6 +1,8 @@
 .m-main {
     @include wt(full);
     margin: 0 auto;
+    position: relative;
+    z-index: 100;
 
     // border: 2px solid cyan;
 
@@ -9,6 +11,6 @@
         @include wt(two-third);
         flex-grow: 1;
         padding-right: sz(xxl);
-        margin-top: sz(xl);
+        padding-top: sz(xl);
     }
 }
