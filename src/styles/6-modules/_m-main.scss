@@ -7,5 +7,6 @@
     @include mq(1120px) {
         margin: 0;
         @include wt(two-third);
+        flex-grow: 1;
     }
 }

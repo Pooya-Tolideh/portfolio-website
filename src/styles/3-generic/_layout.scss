@@ -10,15 +10,16 @@
 //general wrapper
 .l-container {
     width: 90%;
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 0 auto;
 
     border: 5px solid green;
     @include mq(1120px) {
+        @include wt(full);
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
 }

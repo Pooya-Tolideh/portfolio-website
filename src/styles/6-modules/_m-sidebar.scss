@@ -11,6 +11,7 @@
 
     @include mq(1120px) {
         @include wt(third);
+        max-width: 425px;
     }
 }
 
