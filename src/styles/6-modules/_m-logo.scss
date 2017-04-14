@@ -1,0 +1,40 @@
+.m-logo {
+    @include wt(full);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: sz(xs) 0 sz(xxl) 0;
+
+    @include mq(1120px) {
+        position: fixed;
+        z-index: 10;
+        opacity: 0.25;
+    }
+}
+
+.m-logo__side {
+    width: 0; height: 0;
+
+    @include mq(1120px) {
+        width: 0; height: 0;
+    }
+}
+
+.m-logo__container {
+    @include wt(full);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-logo__pic {
+    display: inline-block;
+    width: 135%;
+    max-width: 1000px;
+}
+
+
+// .m-logo__container {
+//     width: 150%;
+//     margin: 0 auto;
+// }
