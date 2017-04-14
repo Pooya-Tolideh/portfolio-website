@@ -10,26 +10,12 @@
 
     @include mq(1120px) {
         @include wt(third);
-        max-width: 425px;
-        padding: 0 sz(xl);
         position: fixed;
         z-index: 100;
         left: 0;
     }
 }
 
-//the dummmy sidebar for when the main sidebar is fixed
-//this keeps the layout in tact
-.m-sidebar__desktop {
-    @include mq(1120px) {
-        //gutters
-        @include wt(third);
-        max-width: 425px;
-        padding: 0 sz(xl);
-        height: 100vh;
-        opacity: 0;
-    }
-}
 
 // 1. PROFILE
 // ________________________
