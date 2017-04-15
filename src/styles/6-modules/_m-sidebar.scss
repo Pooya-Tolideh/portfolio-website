@@ -31,6 +31,11 @@
     @include mq(488px, 1120px){
         width: 18em;
     }
+    //vertical
+    @include mq (1120px, null, 600px) {
+        width: 18vh;
+        max-width: 17em;
+    }
 }
 
 .m-sidebar__profile-desc {
@@ -54,6 +59,15 @@
 
     @include mq(488px, 1120px) {
         font-size: 4.8em;
+    }
+    //vertical spacing
+    @include mq(1120px, null, 600px) {
+        font-size: 5vh;
+        padding-top: 5vh;
+    }
+
+    @include mq(1120px, null, 768px) {
+        font-size: 3.6em;
     }
 }
 
@@ -79,6 +93,14 @@
         width: 350px;
         @include fz(xxl);
     }
+    //vertical
+    @include mq(1120px, null, 600px) {
+        font-size: 2.7vh;
+    }
+
+    @include mq(1120px, null, 680px) {
+        @include fz(xl);
+    }
 }
 
 
@@ -90,6 +112,11 @@
     width: 90%;
     max-width: 500px;
     padding: 8.6em 0 7.2em;
+
+    //vertical spacing
+    @include mq(1120px, null, 600px) {
+        padding: 7vh 0;
+    }
 }
 
 .m-sidebar__skills-header {
@@ -122,4 +149,9 @@
 .m-sidebar__skills-container {
     width: 100%;
     padding: sz(m) 0;
+
+    //vertical spacing
+    @include mq(1120px, null, 600px) {
+        padding: 2vh 0;
+    }
 }
