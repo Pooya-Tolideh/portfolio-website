@@ -67,12 +67,17 @@
  *____________________ */
 
 
-@mixin mq($min-wt, $max-wt: null) {
+@mixin mq($min-wt, $max-wt: null, $min-ht: null) {
 
     @if ($max-wt) {
-      @media all and (min-width: $min-wt + 1 ) and (max-width: $max-wt - 1) { @content; }
+      @media all and (min-width: $min-wt) and (max-width: $max-wt - 1) { @content; }
     }
     @else {
-      @media all and (min-width: $min-wt - 1) { @content; }
+        @if ($min-ht) {
+            @media all and (min-width: $min-wt) and (min-height: $min-ht) { @content; }
+        }
+        @else {
+            @media all and (min-width: $min-wt) { @content; }
+        }
     }
 }
