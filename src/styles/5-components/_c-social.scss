@@ -12,11 +12,18 @@
     padding: sz(xl) 0;
 
     //removing the contacts from sidebar on small screens
-    @include mq(1px, 1120px){
+    @media all and (max-width: 1120px) {
         .m-sidebar & {
             display: none;
         }
     }
+
+    @media all and (min-width: 1120px) and (max-height: 600px) {
+        .m-sidebar & {
+            display: none;
+        }
+    }
+
 }
 
 .c-social__link {

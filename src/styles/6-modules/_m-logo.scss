@@ -5,7 +5,7 @@
     flex-wrap: nowrap;
     padding: sz(xs) 0 sz(xxl) 0;
 
-    @include mq(1120px) {
+    @include mq(1120px, null, 600px) {
     //making the box horizontal and fixed
         flex-direction: row;
         position: fixed;
@@ -30,7 +30,7 @@
     width: 135%;
     max-width: 1000px;
 
-    @include mq(1120px) {
+    @include mq(1120px, null, 600px) {
         width: 100%;
         max-width: 100%;
     }

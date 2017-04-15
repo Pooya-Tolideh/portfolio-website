@@ -35,6 +35,11 @@
     @include mq(488px, 1120px){
         @include fz(xl);
     }
+
+    @media all and (min-width: 1220px) and (max-height: 600px) {
+        @include fz(xl);
+    }
+
 }
 
 .c-skill-cat__divider {

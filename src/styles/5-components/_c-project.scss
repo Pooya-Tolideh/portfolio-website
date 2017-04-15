@@ -22,7 +22,7 @@
         height: 280px;
     }
 
-    @include mq(1120px) {
+    @include mq(1120px, null, 600px) {
         box-shadow: 0 2px 2px $color-gray;
         background-size: cover;
         max-height: 300px;

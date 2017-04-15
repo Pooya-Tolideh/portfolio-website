@@ -6,7 +6,7 @@
 
     // border: 2px solid cyan;
 
-    @include mq(1120px) {
+    @include mq(1120px, null, 600px) {
         margin: 0;
         @include wt(two-third);
         flex-grow: 1;

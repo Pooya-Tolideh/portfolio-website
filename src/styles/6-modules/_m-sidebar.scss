@@ -8,7 +8,7 @@
     width: 100%;
     // border: 1px solid yellow;
 
-    @include mq(1120px) {
+    @include mq(1120px, null, 600px) {
         @include wt(third);
         position: fixed;
         z-index: 100;
