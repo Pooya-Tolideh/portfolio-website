@@ -11,10 +11,13 @@
         position: fixed;
         opacity: 0.15;
         //centering the logo around the profile pic
-        top: 8em; left: -0.7em;
+        top: 10vh; left: -0.7em;
         z-index: 10;
         padding-top: 0;
+    }
 
+    @include mq(1120px, null, 768px) {
+        top: 8em;
     }
 }
 
@@ -31,6 +34,11 @@
     max-width: 1000px;
 
     @include mq(1120px, null, 600px) {
+        width: 50vh;
+        max-width: 50vh;
+    }
+
+    @include mq(1120px, null, 768px) {
         width: 100%;
         max-width: 100%;
     }
