@@ -31,7 +31,7 @@
     @include mq(488px, 1120px){
         width: 18em;
     }
-    
+
     //vertical
     @include mq (1120px, null, 600px) {
         width: 18vh;
@@ -40,18 +40,29 @@
 }
 
 .m-sidebar__profile-desc {
-    position: relative;
-    z-index: 100;
-    // background: $color-darkgray;
-    transform: scale(1);
     opacity: 1;
-    transition: transform 100ms ease-in-out, opacity 50ms ease-in-out;
+    max-height: 500px;
+    //transition for re-appearing
+    // frist it weights for the accordion to collapse
+    // then it starts dropping. and halfway the opacity increases
+    //opacity takes longer to appear. it looks smooter this way
+    transition: max-height 230ms ease-in 230ms, 
+                opacity 300ms ease-in 300ms;
 }
 
 .m-sidebar__profile--isHidden {
-    transform: translateY(-5px);
+    //this how you collapse the height
+    max-height: 0px;
+    overflow: hidden;
     opacity: 0;
+    //transition for disappearing
+    // this needs to happen before accordion. Stages the next animation
+    // and it happens quickly so it won't overlap
+    transition: max-height 230ms ease-out, 
+                opacity 230ms ease-out;
 }
+
+
 
 
 .m-sidebar__profile-title {
