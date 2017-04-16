@@ -238,12 +238,12 @@
 
       <div class="m-main l-flex-col">
         <nav class="m-side-nav s-cf">
-          <a class="m-side-nav__item" href="#">Client Works</a>
-          <a class="m-side-nav__item" href="#">Personal Projects</a>
+          <a class="m-side-nav__item" href="#c-portfolio__clients">Client Works</a>
+          <a class="m-side-nav__item" href="#c-portfolio__personal">Personal Projects</a>
         </nav>
         <!--./m-side-nav-->
 
-        <div class="c-portfolio">
+        <div class="c-portfolio" id="c-portfolio__clients">
           <div class="c-portfolio__header">
             <h2 class="c-portfolio-header">Client Work</h2>
           </div>
@@ -357,7 +357,8 @@
       <!--./c-portfolio--> 
       <!--./CLIENT PROJECTS-->
 
-      <div class="c-portfolio">
+
+      <div class="c-portfolio" id="c-portfolio__personal">
         <div class="c-portfolio__header">
           <h2 class="c-portfolio-header">Personal Projects</h2>
         </div>
@@ -480,6 +481,10 @@
 
 <script>
     console.log('./START');
+
+    // 1. SIDEBAR
+    //___________________________________
+
     var skills = document.querySelectorAll('.c-skill-cat');
     var profile = document.querySelector('.m-sidebar__profile-desc');
     //keeps track of the profile section's height
@@ -546,6 +551,7 @@
           }
         });
     }
+
     console.log('./END');
   </script>
 
