@@ -8,7 +8,9 @@
         margin: 0;
         @include wt(two-third);
         flex-grow: 1;
-        padding-right: sz(xxx);
         padding-top: sz(xl);
+        
+        //this is spacing for the side-nav
+        padding-right: sz(xxx);
     }
 }

@@ -555,22 +555,25 @@
     // 2. SCROLL TO ANCHOR
     //___________________________________
 
+    //import smoothScroll from the global scope
     (function (smoothScroll) {
-      var sideNav = document.querySelectorAll('.m-side-nav__item');
-      console.log(sideNav);
-     
+  
+      // 2. process every sideNav link
+      // and add scrolling func to it
       function getLink(navItem) {
+        //get the link
         var link = navItem.href;
-        console.log(link);
+        // find the position of # in link
         var pos = link.indexOf('#');
+        // get the id
         var link = link.slice(pos + 1);
         console.log(link);
-        navItem.addEventListener('click', function(e){
-          console.log(e, navItem);
-        });
 
+        // add a handler for click
         navItem.addEventListener('click', function(){
+          // get the element with target id
           var section = document.getElementById(link);
+          // scroll
           smoothScroll(
               section,
               625,
@@ -579,14 +582,14 @@
             );
           });
       }
-
-      for(i=0; i < sideNav.length; i++) {    
+      // 1. loop through every item in side-nav
+      //get each sideNav item
+      var sideNav = document.querySelectorAll('.m-side-nav__item');
+      for(i=0; i < sideNav.length; i++) {
+        // we refactoring this into a function so every element gets its own unique scope    
         getLink(sideNav[i]);
       }
-
     }(smoothScroll));
-
-    console.log(smoothScroll)
 
     console.log('./END');
   </script>
