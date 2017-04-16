@@ -13,7 +13,7 @@
     // max-width: 1200px;
     margin: 0 auto;
 
-    border: 5px solid green;
+    // border: 5px solid green;
     @include mq(1120px,null,600px) {
         @include wt(full);
         display: flex;
