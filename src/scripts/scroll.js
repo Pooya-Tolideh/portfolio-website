@@ -1,3 +1,6 @@
+// Plugin for Smooth Scrolling
+
+
 // /**
 //  *
 //  * @param {(number|HTMLElement)} destination - Destination to scroll to (DOM element or number)
