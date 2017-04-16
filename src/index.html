@@ -478,7 +478,7 @@
   </div>
   <!--./l-container-->
 
-
+<script src="scripts/scroll.js"></script>
 <script>
     console.log('./START');
 
@@ -551,6 +551,42 @@
           }
         });
     }
+
+    // 2. SCROLL TO ANCHOR
+    //___________________________________
+
+    (function (smoothScroll) {
+      var sideNav = document.querySelectorAll('.m-side-nav__item');
+      console.log(sideNav);
+     
+      function getLink(navItem) {
+        var link = navItem.href;
+        console.log(link);
+        var pos = link.indexOf('#');
+        var link = link.slice(pos + 1);
+        console.log(link);
+        navItem.addEventListener('click', function(e){
+          console.log(e, navItem);
+        });
+
+        navItem.addEventListener('click', function(){
+          var section = document.getElementById(link);
+          smoothScroll(
+              section,
+              625,
+              'easeInOutQuint',
+              function() {console.log('Just finished scrolling to ' + window.pageYOffset + 'px')}
+            );
+          });
+      }
+
+      for(i=0; i < sideNav.length; i++) {    
+        getLink(sideNav[i]);
+      }
+
+    }(smoothScroll));
+
+    console.log(smoothScroll)
 
     console.log('./END');
   </script>
