@@ -509,61 +509,63 @@
     var i = 0;
     //loop through and add an event listener bubble to every category
     for (; i < skills.length; i++){ 
-
         skills[i].addEventListener('click', function(e){
-          var skillCat = e.target;
-          //get all the pods on every click
-          //used later for checking to see if any is already open
-          var skillTabs = document.querySelectorAll('.c-skill-cat__pod-wrapper');
+            var skillCat = e.target;
+            //get all the pods on every click
+            //used later for checking to see if any is already open
+            var skillTabs = document.querySelectorAll('.c-skill-cat__pod-wrapper');
 
-          //checking if the clicked items is not __tab element already
-          if (e.target.className !== 'c-skill-cat__tab') {
-            var tag = e.target.tagName;
-            //check the tag names
-            //this is for the svg problem
-            if (tag === 'rect') {
-              skillCat = e.target.parentNode.parentNode.parentNode;
-            } else if (tag === 'g') {
-              skillCat = e.target.parentNode.parentNode;
+            //checking if the clicked items is not __tab element already
+            if (e.target.className !== 'c-skill-cat__tab') {
+              var tag = e.target.tagName;
+              //check the tag names
+              //this is for the svg problem
+              if (tag === 'rect') {
+                skillCat = e.target.parentNode.parentNode.parentNode;
+              } else if (tag === 'g') {
+                skillCat = e.target.parentNode.parentNode;
+              } else {
+                skillCat = e.target.parentNode;
+              }
+            }
+
+            //once the parent element is determined get the pod
+            var pod = skillCat.parentNode.querySelector('.c-skill-cat__pod-wrapper');
+            var contacts = document.getElementById('c-social--sidebar');
+
+            //check to see if the pod is already open
+            if (pod.className.indexOf('c-skill-cat__pod--isClosed') === -1) {
+              //if yes, turn back the icon
+              skillCat.querySelector('svg').style.transform = 'rotate(0deg)';
+              // add isClosed class to remove pod
+              pod.className += ' c-skill-cat__pod--isClosed';
+              // bring back the profile section
+              profile.className = ' m-sidebar__profile-desc';
+              // turn back the profile height
+              contacts.style.opacity = 1;
+
             } else {
-              skillCat = e.target.parentNode;
+              //If the pod is closed
+              // loop through all the pods
+              var j = 0;
+              for (; j < skillTabs.length; j++){
+                //check to see if any pod is already open
+                if (skillTabs[j].className.indexOf('c-skill-cat__pod--isClosed') === -1) {
+                  //close that pod
+                  skillTabs[j].className += ' c-skill-cat__pod--isClosed';
+                  //turn back its icon
+                  skillTabs[j].parentNode.querySelector('svg').style.transform = 'rotate(0deg)';
+                } 
+                contacts.style.opacity = 0; 
+              }
+              // rotate the icon for the selected pod
+              skillCat.querySelector('svg').style.transform = 'rotate(45deg)';
+              // remove isClosed classname
+              pod.className = 'c-skill-cat__pod-wrapper';
+              // hide the profile and set its height to zero
+              // this is so the skill section is pulled up and more room is created
+              profile.className = 'm-sidebar__profile-desc m-sidebar__profile--isHidden';
             }
-          }
-
-          //once the parent element is determined get the pod
-          var pod = skillCat.parentNode.querySelector('.c-skill-cat__pod-wrapper');
-
-          //check to see if the pod is already open
-          if (pod.className.indexOf('c-skill-cat__pod--isClosed') === -1) {
-            //if yes, turn back the icon
-            skillCat.querySelector('svg').style.transform = 'rotate(0deg)';
-            // add isClosed class to remove pod
-            pod.className += ' c-skill-cat__pod--isClosed';
-            // bring back the profile section
-            profile.className = ' m-sidebar__profile-desc';
-            // turn back the profile height
-
-          } else {
-            //If the pod is closed
-            // loop through all the pods
-            var j = 0;
-            for (; j < skillTabs.length; j++){
-              //check to see if any pod is already open
-              if (skillTabs[j].className.indexOf('c-skill-cat__pod--isClosed') === -1) {
-                //close that pod
-                skillTabs[j].className += ' c-skill-cat__pod--isClosed';
-                //turn back its icon
-                skillTabs[j].parentNode.querySelector('svg').style.transform = 'rotate(0deg)';
-              }  
-            }
-            // rotate the icon for the selected pod
-            skillCat.querySelector('svg').style.transform = 'rotate(45deg)';
-            // remove isClosed classname
-            pod.className = 'c-skill-cat__pod-wrapper';
-            // hide the profile and set its height to zero
-            // this is so the skill section is pulled up and more room is created
-            profile.className = 'm-sidebar__profile-desc m-sidebar__profile--isHidden';
-          }
         });
     }
 

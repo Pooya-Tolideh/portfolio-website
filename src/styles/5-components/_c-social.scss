@@ -3,6 +3,8 @@
     @include wt(five);
     min-width: 300px;
     margin: 0 auto;
+    opacity: 1;
+    transition: opacity 230ms ease-out;
 
     display: flex;
     flex-direction: row;
