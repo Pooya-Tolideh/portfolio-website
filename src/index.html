@@ -541,7 +541,7 @@
               pod.className += ' c-skill-cat__pod--isClosed';
               // bring back the profile section
               profile.className = ' m-sidebar__profile-desc';
-              // turn back the profile height
+              // bring back the contacts
               contacts.style.opacity = 1;
 
             } else {
@@ -556,6 +556,7 @@
                   //turn back its icon
                   skillTabs[j].parentNode.querySelector('svg').style.transform = 'rotate(0deg)';
                 } 
+                // disappear contacts when the pod opens
                 contacts.style.opacity = 0; 
               }
               // rotate the icon for the selected pod
