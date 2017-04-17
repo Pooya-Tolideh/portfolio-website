@@ -102,6 +102,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: sz(s);
+    padding-top: sz(xl);
     max-height: 100vh;
     overflow: scroll;
     opacity: 1;
@@ -148,13 +149,14 @@
 .c-skill-cat__pod-wrapper::before {
     content: " ";
     position: absolute;
-    height: 50px;
+    height: 60px;
     width: 100%;
     left: 0;
     bottom:0;
     z-index: 1000;
+    $darker-navy : darken($color-navy, 2%);
     background: rgba($color-navy, 0.5);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba($color-navy,1) 100%);
+    background: linear-gradient(to bottom, rgba($color-navy,0.4) 0%, rgba($darker-navy,1) 70%);
     // transition: height ease-in 580ms;
 }
 
@@ -162,5 +164,13 @@
 
 .c-skill-cat__pod-item {
     @include wt(half);
-    padding-bottom: sz(l);
+    padding: 0 10% sz(xxl);
+
+    @include mq(650px, null) {
+        @include wt(third);
+    }
+
+    @include mq(1120px, null, 600px) {
+        @include wt(half);
+    }
 }
