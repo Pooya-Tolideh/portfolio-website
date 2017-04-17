@@ -23,19 +23,30 @@
 
 
 .m-sidebar__profile-pic {
-    width: 15em; height: auto;
-    padding-top: sz(xl);
+    width: 40%; height: auto;
+    padding-top: 40vw;
     position: relative;
     z-index: 100;
 
-    @include mq(488px, 1120px){
-        width: 18em;
+    @include mq(488px){
+        width: 40%;
+        max-width: 40em;
+        padding-top: 35vw;
+    }
+
+    @include mq(680px) {
+        width: 50%;
+        max-width: 30em;
+        padding-top: 28vw;
     }
 
     //vertical
     @include mq (1120px, null, 600px) {
+        padding-top: sz(xxl);
         width: 18vh;
         max-width: 14.5em;
+        transform-origin: center center 0;
+        transform: scale(0.95);
     }
 }
 
@@ -67,10 +78,15 @@
 
 .m-sidebar__profile-title {
     text-shadow: 3px 3px 0px $color-blue;
-    padding-top: 48px;
+    padding-top: 15vw;
 
     @include mq(488px, 1120px) {
         font-size: 4.8em;
+        padding-top: 12vw;
+    }
+
+    @include mq(680px) {
+        padding-top: 8vw;
     }
     //vertical spacing
     @include mq(1120px, null, 600px) {
@@ -79,7 +95,7 @@
     }
 
     @include mq(1120px, null, 768px) {
-        font-size: 3.6em;
+        font-size: 3.4em;
     }
 }
 

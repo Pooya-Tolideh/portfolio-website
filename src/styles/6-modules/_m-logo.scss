@@ -4,15 +4,21 @@
     flex-direction: column;
     flex-wrap: nowrap;
     padding: sz(xs) 0 sz(xxl) 0;
+    //making the box horizontal and fixed
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
     @include mq(1120px, null, 600px) {
-    //making the box horizontal and fixed
-        flex-direction: row;
         position: fixed;
+        flex-direction: row;
         opacity: 0.15;
         //centering the logo around the profile pic
         top: 10vh; left: -0.7em;
-        z-index: 10;
+        transform: translateX(0);
+
         padding-top: 0;
     }
 
@@ -30,7 +36,7 @@
 
 .m-logo__pic {
     display: inline-block;
-    width: 135%;
+    width: 100%;
     max-width: 1000px;
 
     @include mq(1120px, null, 600px) {
