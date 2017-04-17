@@ -46,7 +46,7 @@ gulp.task('serve', function() {
 
 //LIVERELOAD
 // Watch files for changes & reload
-gulp.task('serve:dev', [/*'scripts',*/ 'styles'], () => {
+gulp.task('serve:dev', ['scripts', 'styles'], () => {
   browserSync({
     notify: false,
     // Customize the Browsersync console logging prefix
@@ -63,7 +63,7 @@ gulp.task('serve:dev', [/*'scripts',*/ 'styles'], () => {
   
   gulp.watch(['src/**/*.html'], reload);
   gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['src/scripts/**/*.js'], reload); //scripts
+  gulp.watch(['src/scripts/**/*.js'], ['scripts', reload]); //scripts
   gulp.watch(['src/images/**/*'], reload);
 });
 
@@ -106,6 +106,31 @@ gulp.task('styles', () => {
 });
 
 
+gulp.task('scripts', () =>
+    gulp.src([
+      // Note: Since we are not using useref in the scripts build pipeline,
+      //       you need to explicitly list your scripts here in the right order
+      //       to be correctly concatenated
+      './src/scripts/skills-menu.js',
+      './src/scripts/scroll.js',
+      './src/scripts/side-nav.js'
+      // Other scripts
+    ])
+      .pipe($.newer('.tmp/scripts'))
+      .pipe($.sourcemaps.init())
+      .pipe($.babel())
+      .pipe($.sourcemaps.write())
+      .pipe(gulp.dest('.tmp/scripts'))
+      .pipe($.concat('main.min.js'))
+      .pipe($.uglify())
+      // Output files
+      .pipe($.size({title: 'scripts'}))
+      .pipe($.sourcemaps.write('.'))
+      .pipe(gulp.dest('dist/scripts'))
+      .pipe(gulp.dest('.tmp/scripts'))
+);
+
+
 
 
 // ===========================
@@ -131,8 +156,8 @@ gulp.task('build', function() {
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    [/*'lint',*/ 'html', /*'scripts',*/ 'minify-ejs', 'images', 'copy'],
-    // 'generate-service-worker',
+    [/*'lint', 'html','minify-ejs','images',*/ 'scripts', 'copy'],
+    /*'generate-service-worker',*/
     cb
   )
 );
@@ -222,3 +247,5 @@ gulp.task('copy', () =>
 /*
 DOWNLOAD PAGE SPEED AND Service Workers from WEB STARTER KIT
 */
+
+
