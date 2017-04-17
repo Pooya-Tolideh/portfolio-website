@@ -24,12 +24,12 @@
 
         // Predefine list of available timing functions
         // If you need more, tween js is full of great examples
-        // https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L421-L737
+
         var easings = {
-            linear(t) {
+            linear : function (t) {
                 return t;
             },
-            easeInOutQuint(t) {
+            easeInOutQuint : function (t) {
                 return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
             }
         };
@@ -74,10 +74,10 @@
             // Stop requesting animation when window reached its destination
             // And run a callback function
             if (window.pageYOffset === destinationOffsetToScroll) {
-            if (callback) {
-                callback();
-            }
-            return;
+                if (callback) {
+                    callback();
+                }
+                return;
             }
 
             // If window still needs to scroll to reach destination
