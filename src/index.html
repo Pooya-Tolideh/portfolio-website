@@ -548,141 +548,21 @@
 
   </div>
   <!--./l-container-->
-
-<script src="scripts/scroll.js"></script>
-<script>
-    console.log('./START');
-
-    // 1. SIDEBAR
-    //___________________________________
-
-    var skills = document.querySelectorAll('.c-skill-cat');
-    var profile = document.querySelector('.m-sidebar__profile-desc');
-    //keeps track of the profile section's height
-    //so we know what value to reset it to
-    
-
-    var i = 0;
-    //loop through and add an event listener bubble to every category
-    for (; i < skills.length; i++){ 
-        skills[i].addEventListener('click', function(e){
-            var skillCat = e.target;
-            //get all the pods on every click
-            //used later for checking to see if any is already open
-            var skillTabs = document.querySelectorAll('.c-skill-cat__pod-wrapper');
-
-            //checking if the clicked items is not __tab element already
-            if (e.target.className !== 'c-skill-cat__tab') {
-              var tag = e.target.tagName;
-              //check the tag names
-              //this is for the svg problem
-              if (tag === 'rect') {
-                skillCat = e.target.parentNode.parentNode.parentNode;
-              } else if (tag === 'g') {
-                skillCat = e.target.parentNode.parentNode;
-              } else {
-                skillCat = e.target.parentNode;
-              }
-            }
-
-            //once the parent element is determined get the pod
-            var pod = skillCat.parentNode.querySelector('.c-skill-cat__pod-wrapper');
-            var contacts = document.getElementById('c-social--sidebar');
-
-            //check to see if the pod is already open
-            if (pod.className.indexOf('c-skill-cat__pod--isClosed') === -1) {
-              //if yes, turn back the icon
-              skillCat.querySelector('svg').style.transform = 'rotate(0deg)';
-              // add isClosed class to remove pod
-              pod.className += ' c-skill-cat__pod--isClosed';
-              // bring back the profile section
-              profile.className = ' m-sidebar__profile-desc';
-              // bring back the contacts
-              contacts.style.opacity = 1;
-
-            } else {
-              //If the pod is closed
-              // loop through all the pods
-              var j = 0;
-              for (; j < skillTabs.length; j++){
-                //check to see if any pod is already open
-                if (skillTabs[j].className.indexOf('c-skill-cat__pod--isClosed') === -1) {
-                  //close that pod
-                  skillTabs[j].className += ' c-skill-cat__pod--isClosed';
-                  //turn back its icon
-                  skillTabs[j].parentNode.querySelector('svg').style.transform = 'rotate(0deg)';
-                } 
-                // disappear contacts when the pod opens
-                contacts.style.opacity = 0; 
-              }
-              // rotate the icon for the selected pod
-              skillCat.querySelector('svg').style.transform = 'rotate(45deg)';
-              // remove isClosed classname
-              pod.className = 'c-skill-cat__pod-wrapper';
-              // hide the profile and set its height to zero
-              // this is so the skill section is pulled up and more room is created
-              profile.className = 'm-sidebar__profile-desc m-sidebar__profile--isHidden';
-            }
-        });
-    }
-
-    // 2. SCROLL TO ANCHOR
-    //___________________________________
-
-    //import smoothScroll from the global scope
-    (function (smoothScroll) {
-  
-      // 2. process every sideNav link
-      // and add scrolling func to it
-      function getLink(navItem) {
-        //get the link
-        var link = navItem.href;
-        // find the position of # in link
-        var pos = link.indexOf('#');
-        // get the id
-        var link = link.slice(pos + 1);
-        console.log(link);
-
-        // add a handler for click
-        navItem.addEventListener('click', function(){
-          // get the element with target id
-          var section = document.getElementById(link);
-          // scroll
-          smoothScroll(
-              section,
-              625,
-              'easeInOutQuint',
-              function() {console.log('Just finished scrolling to ' + window.pageYOffset + 'px')}
-            );
-          });
-      }
-      // 1. loop through every item in side-nav
-      //get each sideNav item
-      var sideNav = document.querySelectorAll('.m-side-nav__item');
-      for(i=0; i < sideNav.length; i++) {
-        // we refactoring this into a function so every element gets its own unique scope    
-        getLink(sideNav[i]);
-      }
-    }(smoothScroll)); 
-
-    console.log('./END');
-  </script>
-
-
-
     <!-- build:js scripts/main.min.js -->
+  <footer>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!-- Built with love using Web Starter Kit -->
+    <!--<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+  <!-- Built with love using Web Starter Kit -->
+  </footer>
+  
   </body>
 </html>
