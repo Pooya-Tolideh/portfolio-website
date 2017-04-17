@@ -24,9 +24,9 @@
             font-weight: $font-reg;
             margin-right: 10px;
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
             transition: font-size 150ms ease-out,
-                        transform 150ms ease-out 150ms,  
+                        transform 170ms ease-out 150ms,  
                         opacity 50ms ease-out 150ms;
         }
     }
@@ -40,7 +40,7 @@
     opacity: 0;
     letter-spacing: 0.06em;
     transform-origin: righ center 0;
-    transform: translateX(-2px);
+    transform: translateY(2px);
     transition: font-size 130ms ease-out,
                 opacity 130ms ease-out;
 }
