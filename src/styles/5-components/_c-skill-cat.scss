@@ -133,7 +133,19 @@
 
     //reducing pod height when in dekstop mode
     @include mq(1120px, null, 600px) {
-        max-height: 45vh;
+        max-height: 35vh;
+    }
+
+    // graceful degradation for pod height
+    // prevents jitteriness when opens
+    @include mq(1120px, null, 800px) {
+        max-height: 38vh;
+    }
+
+    // graceful degradation for pod height
+    // prevents jitteriness when opens
+    @include mq(1120px, null, 900px) {
+        max-height: 42vh;
     }
 }
 
