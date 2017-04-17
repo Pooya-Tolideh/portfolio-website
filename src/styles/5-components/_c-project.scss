@@ -37,10 +37,14 @@
 
     &:hover {
         .c-link-btn {
-            animation: hover-link-icon 150ms ease-in-out normal forwards;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 150ms ease-out,
+                        opacity 150ms ease-out;
         }
     }
 }
+
 
 
 
