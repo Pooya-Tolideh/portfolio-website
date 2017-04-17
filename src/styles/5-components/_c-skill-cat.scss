@@ -102,7 +102,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: sz(s);
-    max-height: 280px;
+    max-height: 100vh;
     overflow: scroll;
     opacity: 1;
 
@@ -128,6 +128,11 @@
         //but opacity takes longer to make it loop smooth
         transition: max-height 230ms ease-out , 
                     opacity 300ms ease-out;
+    }
+
+    //reducing pod height when in dekstop mode
+    @include mq(1120px, null, 600px) {
+        max-height: 45vh;
     }
 }
 
