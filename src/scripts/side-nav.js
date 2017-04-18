@@ -32,4 +32,4 @@
     // we refactoring this into a function so every element gets its own unique scope    
     getLink(sideNav[i]);
     }
-}(smoothScroll)); 
+})(smoothScroll); 
