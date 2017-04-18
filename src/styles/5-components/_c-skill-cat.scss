@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: sz(s);
     padding-top: sz(xl);
     max-height: 100vh;
@@ -179,9 +179,9 @@
 
 .c-skill-cat__pod-item {
     @include wt(half);
-    padding: 0 15% sz(xl);
+    padding: 0 12% sz(m) 12%;
 
-    @include mq(650px, null) {
+    @include mq(488px, null) {
         @include wt(third);
     }
 

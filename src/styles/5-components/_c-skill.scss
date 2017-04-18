@@ -6,11 +6,27 @@
 }
 
 .c-skill__name {
-    padding-top: sz(mini);
     color: $color-gray;
     @include fz(xs);
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     font-weight: $font-thin;
-    line-height: sz(s);    
+    line-height: sz(s);
+    opacity: 0.9;    
+}
+
+.c-skill__icon {
+    //width of the icon on small screens
+    @include wt('full');
+    max-width: 4em;
+
+     //width of the icon on tablets
+    @include mq(488px) {
+        max-width: 100%;
+    }
+
+     //width of the icon desktop
+    @include mq(1120px, null, 600px) {
+        max-width: 4em;
+    }
 }
 
