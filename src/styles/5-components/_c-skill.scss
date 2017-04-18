@@ -1,5 +1,8 @@
 .c-skill {
     text-align: center;
+    & svg {
+        opacity: 0.85;
+    }
 }
 
 .c-skill__name {
@@ -10,3 +13,4 @@
     font-weight: $font-thin;
     line-height: sz(s);    
 }
+

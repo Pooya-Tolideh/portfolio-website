@@ -179,7 +179,7 @@
 
 .c-skill-cat__pod-item {
     @include wt(half);
-    padding: 0 10% sz(xl);
+    padding: 0 15% sz(xl);
 
     @include mq(650px, null) {
         @include wt(third);
