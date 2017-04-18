@@ -8,9 +8,14 @@
 .c-project__thumb{
     //flex-box: c-project
     align-self: stretch;
-
     position: relative;
-    height: 180px;
+
+    //adjusting the width/height based on vw on single column smaller screens
+    // then using the grid width for larger screens
+    height: 50vw;
+    max-height: 362px;
+    //==================
+
     margin-bottom: 40px;
     background-image: url('../../images/sample-project.png');
     background-position: center;
@@ -19,19 +24,17 @@
     box-shadow: 0 5px 15px rgba($color-gray, 0.75);
 
     @include mq(576px) {
-        height: 280px;
     }
 
     //change shadow on desktop
     @include mq(1120px, null, 600px) {
         box-shadow: 0 2px 2px $color-gray;
-        // background-size: cover;
     }
 
     // when container shrink, height changes
     // change the styling to accomodate the change in size
     @include mq(1470px, null, 600px) {
-        background-size: cover;
+        background-size: "560px 362px";
         max-height: 300px;
     }
 
