@@ -1,6 +1,7 @@
 .c-link-btn {
     opacity: 0;
     position: absolute;
+    z-index: 1000;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 123ms ease-out,
@@ -14,8 +15,8 @@
     border-radius: 50px;
     padding: 15px;
 
-    background: rgba($color-white, 0.9);
-    border: 1px solid $color-orange;
+    background: $color-orange;
+    // border: 1px solid $color-orange;
 
 
     &:hover {
@@ -34,7 +35,7 @@
 }
 
 .c-link-btn__text {
-    color: $color-orange;
+    color: $color-white;
     font-weight: $font-reg;
     font-size: 0;
     opacity: 0;
@@ -46,9 +47,9 @@
 }
 
 .c-link-btn__icon {
-    width: 17px; height: auto;
+    width: 22px; height: auto;
 
     & path {
-        fill: $color-orange;
+        fill: $color-white;
     }
 }
