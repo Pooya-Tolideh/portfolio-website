@@ -157,7 +157,7 @@ gulp.task('build', function() {
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    [/*'lint', 'html','minify-ejs','images',*/ 'scripts', 'copy'],
+    [/*'lint', 'html','minify-ejs',*/'images', 'scripts', 'copy'],
     /*'generate-service-worker',*/
     cb
   )
