@@ -40,16 +40,17 @@
         console.log(pod.className);
     }
 
-    function toggleProfile() {
-        if (profile.className.indexOf('m-sidebar__profile--isHidden') !== -1) {
-            profile.className = 'm-sidebar__profile-desc';
-        } else {
-            profile.className += ' m-sidebar__profile--isHidden';
-        } 
+    function toggleProfile(isClosed) {
+        profile.className = 'm-sidebar__profile-desc';
+        profile.className += isClosed ? ' m-sidebar__profile--isHidden' : '';
     }
 
     function toggleContacts(amount) {
         contacts.style.opacity = amount;
+    }
+
+    function toggleScroll(isClosed) {
+        document.body.className = isClosed ? 's-noScroll' : '';
     }
 
 
@@ -71,22 +72,26 @@
                 closeIt(skillTabs[j]);
             } 
         }
+
     }
 
 
     function openTab(skillCat, pod){
         //If the pod is closed
         // loop through all the pods
-        closeOthers(); 
+        var isOpen = closeOthers(); 
         // disappear contacts when the pod opens
         toggleContacts(0);
         // rotate the icon for the selected pod
         rotate(skillCat);
         // remove isClosed classname
         togglePod(pod);
-        // hide the profile and set its height to zero
-        // this is so the skill section is pulled up and more room is created
-        toggleProfile();
+
+        //bring back scrolling
+        toggleScroll(true);
+        //bring back profile
+        toggleProfile(true);
+
     }
 
     function closeTab(skillCat, pod) {
@@ -94,10 +99,12 @@
         rotate(skillCat, 'close');
         // add isClosed class to remove pod
         togglePod(pod);
-        // bring back the profile section
-        toggleProfile();
         // bring back the contacts
         toggleContacts(1);
+        //bring back scrolling
+        toggleScroll(false);
+        //bring back profile
+        toggleProfile(false);
     }
 
     function onClick(skill) {
@@ -122,4 +129,4 @@
         //add the event handler
         onClick(skills[i]);    
     }
-}());
+})();
