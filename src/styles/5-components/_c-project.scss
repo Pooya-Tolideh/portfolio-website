@@ -62,7 +62,7 @@
     background: $color-darkgray;
     opacity: 0;
     z-index: 100;
-    transition: opacity ease-in 150ms;
+    transition: opacity ease-in 200ms;
 }
 
 
@@ -98,6 +98,7 @@
 .c-project__title {
     letter-spacing: 1px;
     line-height: 1.6em;
+    font-weight: $font-reg;
     //desktop mode
     @include mq(768px) {
 
@@ -188,7 +189,8 @@
     
     @include wt(eleven);
     @include fz(l);
-    line-height: 1.4em;
+    line-height: 1.6em;
+    letter-spacing: 0.02em;
 
     //desktop mode
     @include mq(768px) {
