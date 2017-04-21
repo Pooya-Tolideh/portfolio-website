@@ -42,6 +42,7 @@ $color-tint-lighter: $color-tint * 2 !default;
 
 //----THEME----//
 
+$darker-navy : darken($color-navy, 2%);
 
 // // Global
 // $initial-color: $color-white !default;
