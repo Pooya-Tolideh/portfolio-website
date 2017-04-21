@@ -9,7 +9,7 @@
     // border: 1px solid yellow;
     overflow: hidden;
     
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         @include wt(third);
         position: fixed;
         z-index: 100;
@@ -41,7 +41,7 @@
     }
 
     //vertical
-    @include mq (1120px, null, 600px) {
+    @include mq (1120px, null, 540px) {
         padding-top: sz(xxl);
         width: 18vh;
         max-width: 14.5em;
@@ -89,7 +89,7 @@
         padding-top: 8vw;
     }
     //vertical spacing
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         font-size: 5vh;
         padding-top: 5vh;
     }
@@ -122,7 +122,7 @@
         @include fz(xxl);
     }
     //vertical
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         font-size: 2.7vh;
     }
 
@@ -142,7 +142,7 @@
     padding: 8.6em 0 7.2em;
 
     //vertical spacing
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         padding: 7vh 0;
     }
 }
@@ -179,7 +179,7 @@
     padding: sz(m) 0;
 
     //vertical spacing
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         padding: 2vh 0;
     }
 }

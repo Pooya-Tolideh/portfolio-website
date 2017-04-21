@@ -26,13 +26,13 @@
     }
 
     //change shadow on desktop
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         box-shadow: 0 2px 2px $color-gray;
     }
 
     // when container shrink, height changes
     // change the styling to accomodate the change in size
-    @include mq(1470px, null, 600px) {
+    @include mq(1470px, null, 540px) {
         background-size: "560px 362px";
         max-height: 300px;
     }

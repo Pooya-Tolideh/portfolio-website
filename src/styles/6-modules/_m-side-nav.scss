@@ -1,7 +1,7 @@
 .m-side-nav {
     display: none;
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         display: inline-block;
         position: fixed;
         transform: rotate(90deg);

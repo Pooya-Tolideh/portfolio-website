@@ -16,7 +16,7 @@
 
 .c-portfolio__projects {
 
-    @include mq(1470px,null,600px) {
+    @include mq(1470px,null,540px) {
         @include wt(full);
         padding: 0 3.5vw;
         flex-direction: row;
@@ -41,7 +41,7 @@
         padding-bottom: 12em;
     }
 
-    @include mq(1470px, null, 600px) {
+    @include mq(1470px, null, 540px) {
         min-width: 400px;
         @include wt(half);
         padding-right: 1.75vw;
@@ -49,7 +49,7 @@
         padding-bottom: 6vw;
     }
 
-    @include mq(1947px, null, 600px) {
+    @include mq(1947px, null, 540px) {
         @include wt(third);
     }
 }

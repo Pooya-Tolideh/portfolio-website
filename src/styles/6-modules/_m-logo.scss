@@ -11,7 +11,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         position: fixed;
         flex-direction: row;
         opacity: 0.15;
@@ -39,7 +39,7 @@
     width: 100%;
     max-width: 1000px;
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         width: 50vh;
         max-width: 50vh;
     }

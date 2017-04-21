@@ -13,7 +13,7 @@
     justify-content: space-between;
     padding: sz(xxl) 0;
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -33,14 +33,14 @@
     } 
 
     //small heights
-    @media all and (min-width: 1120px) and (max-height: 600px) {
+    @media all and (min-width: 1120px) and (max-height: 540px) {
         .m-sidebar & {
             display: none;
         }
     }
 
     //vertical spacing 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         padding: 5vh 0;
     }
 

@@ -4,7 +4,7 @@
     position: relative;
     z-index: 100;
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         margin: 0;
         @include wt(two-third);
         flex-grow: 1;

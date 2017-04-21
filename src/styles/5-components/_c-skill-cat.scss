@@ -26,7 +26,7 @@
     }
 
     // vertical spacing
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         padding: 2.4vh 0;
     }
 
@@ -47,12 +47,12 @@
     }
 
     //small height
-    @media all and (min-width: 1220px) and (max-height: 600px) {
+    @media all and (min-width: 1220px) and (max-height: 540px) {
         @include fz(xl);
     }
 
     //vertical spacing
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         font-size: 1.5em;
     }
 
@@ -142,7 +142,7 @@
     }
 
     //reducing pod height when in dekstop mode
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         max-height: 35vh;
     }
 
@@ -170,7 +170,7 @@
 
 .c-skill-cat__pod-wrapper::before {
     display: none;
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         content: " ";
         display: inline-block;
         position: absolute;
@@ -194,7 +194,7 @@
         @include wt(third);
     }
 
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         @include wt(half);
     }
 }

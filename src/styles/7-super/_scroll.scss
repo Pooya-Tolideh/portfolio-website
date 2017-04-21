@@ -1,6 +1,6 @@
 // stops the body from scrolling when the sidebar menu opens
 .s-noScroll {
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         overflow: hidden;
     }
 }

@@ -2,7 +2,7 @@
 //this keeps the layout in tact
 .s-xl-sidebar{
     overflow:hidden;
-    @include mq(1120px, null, 600px) {
+    @include mq(1120px, null, 540px) {
         //gutters
         @include wt(third);
         max-width: 425px;
