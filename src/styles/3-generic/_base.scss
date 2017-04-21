@@ -12,18 +12,28 @@ h1 {
     font-size: 3.4em;
     font-weight: $font-reg;
     letter-spacing: 7px;
+    -webkit-font-smoothing: antialiased;
+        -webkit-text-rendering: optimizeLegibility; 
+            text-rendering: optimizeLegibility; 
 }
 
 h2 {
     color: $color-midgray;
     font-family: $primary-font-family;
     @include fz(giga);
+    -webkit-font-smoothing: antialiased;
+        -webkit-text-rendering: optimizeLegibility; 
+            text-rendering: optimizeLegibility; 
 }
 
 h3 {
     color: $color-darkgray;
     font-family: $primary-font-family;
+    font-weight: $font-reg;
     @include fz(xl);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-rendering: optimizeLegibility; 
+            text-rendering: optimizeLegibility; 
 }
 
 p {
@@ -31,6 +41,9 @@ p {
     font-family: $secondary-font-family;
     @include fz(m);
     font-weight: $font-thin;
+    -webkit-font-smoothing: antialiased;
+        -webkit-text-rendering: optimizeLegibility; 
+            text-rendering: optimizeLegibility; 
 }
 
 
